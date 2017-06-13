@@ -20,7 +20,7 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io). Windows users may need to run terminal as Administrator.
 
 ## Notification component
-To use notification component in your project you have to import it to your component and then place it somewhere in your html template:
+To use notification component in your project you have to import it to your component and then place it in your html template:
     
     ...
 
@@ -56,11 +56,11 @@ createNotification:
 
     }
 
-Here we are dynamically create html for our new notification. To add, create html on the fly we are using [Renderer2](https://angular.io/api/core/Renderer2) class.
+Here we dynamically create html for our new notification. To add, create html on the fly we are using [Renderer2](https://angular.io/api/core/Renderer2) class.
 
-As well we subscribe to necessary events that will invoke at some point in our notification, like click when we will click on notification and animationend when animation for particular notification will finished.
+We also subscribe to necessary events that will invoke at some point in our notification, like onclick when we will click on notification and animationend when animation for particular notification will finished.
 
-Also we are checking the total number of current notifications. And if it more than 5 than we are starting grouping oldest one.
+Also we checking the total number of current notifications. And if there are more than 5 notifications than we start grouping oldest ones.
 
 createGroup:
 
@@ -70,7 +70,7 @@ createGroup:
 
     }
 
-Is very similar to createNotification, except that we dont need any parametrs here.
+Is very similar to createNotification, except that we dont need any parameters here.
 
 
 ## Further help

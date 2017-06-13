@@ -51,8 +51,7 @@ export class NotificationComponent implements OnInit, AfterViewInit {
     }
 
     this.total_number_of_ntfs++;
-    //console.log(this.total_number_of_ntfs);
-
+    
     let notification = this.renderer.createElement("div");
     this.renderer.addClass(notification, "notification");
     this.renderer.addClass(notification, "in");
@@ -72,14 +71,12 @@ export class NotificationComponent implements OnInit, AfterViewInit {
 
     this.renderer.appendChild(this.parent, notification);
     this.renderer.addClass(notification, type_of_ntf + "AnimIn");
-
-
-    //return notification;
+    
   }
 
   addListeners(notification: any, type_of_ntf: string) {
     this.renderer.listen(notification, "click", () => {
-      // console.log("clicked!");
+      
       this.clickHandler(notification, type_of_ntf);
     });
     this.renderer.listen(notification, "animationend", (e) => {
@@ -120,7 +117,7 @@ export class NotificationComponent implements OnInit, AfterViewInit {
   }
 
   animationendHandler(notification: any, type_of_ntf: string, e: any) {
-    //console.log(e.target.classList);
+   
     if (e.target.classList.contains('in')) {
       this.renderer.setStyle(notification, "opacity", "1");
       if (type_of_ntf === "info") {
