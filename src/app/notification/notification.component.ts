@@ -7,10 +7,10 @@ import { Component, OnInit, AfterViewInit, Renderer2 } from '@angular/core';
 })
 export class NotificationComponent implements OnInit, AfterViewInit {
 
-  parent: any;
+  parent: any; // will host the div of all notifications
   total_number_of_ntfs: number;
   categories = ['info', 'warning', 'error'];
-  notification_time = 90000;
+  notification_time = 90000; // 90sec
   showGrouped = false;
   groupedTotal = 0;
   maxNumberOfNtfs = 5;
@@ -24,7 +24,6 @@ export class NotificationComponent implements OnInit, AfterViewInit {
 
   ngAfterViewInit() {
     this.parent = this.renderer.selectRootElement(".notifications");
-    // console.log(this.parent);
   }
 
   show(header_text: string, body_text: string, type_of_ntf: string) {

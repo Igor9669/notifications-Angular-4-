@@ -8,7 +8,7 @@ import { NotificationComponent } from './notification/notification.component';
 })
 export class AppComponent {
   @ViewChild(NotificationComponent)
-  private notificationComponent: NotificationComponent;
+  notificationComponent: NotificationComponent;
 
 
   header = "";

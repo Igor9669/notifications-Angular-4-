@@ -17,7 +17,7 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 ## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io). Windows users may need to run terminal as Administrator.
 
 ## Notification component
 To use notification component in your project you have to import it to your component and then place it somewhere in your html template:
@@ -25,7 +25,7 @@ To use notification component in your project you have to import it to your comp
     ...
 
     <app-notification></app-notification>
-    
+
     ...
 
 ### Notification methods
@@ -38,6 +38,8 @@ It takes 3 parameters:
     - The body text
 
     - The type of notification ("error", "info", "warning");
+
+Use it to show notification in your app.
 
 
 
