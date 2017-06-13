@@ -56,10 +56,21 @@ createNotification:
 
     }
 
-Here we are dynamically create html for our new notification. I used special class that Angular team created for that [Renderer2](https://angular.io/api/core/Renderer2).
+Here we are dynamically create html for our new notification. To add, create html on the fly we are using [Renderer2](https://angular.io/api/core/Renderer2) class.
 
+As well we subscribe to necessary events that will invoke at some point in out notification, like click when we will click on notification and animationend when animation for particular notification will finished.
 
+Also we are checking the total number of current notifications. And if it more than 5 than we are starting grouping oldest one.
 
+createGroup:
+
+    createGroup() {
+        
+        ...
+
+    }
+    
+Is very similar to createNotification, except that we dont need any parametrs here.
 
 
 ## Further help
