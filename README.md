@@ -26,6 +26,12 @@ To use notification component in your project you have to import it to your comp
 `
 
 ### Notification methods
+show(): `show(header_text: string, body_text: string, type_of_ntf: string)`
+
+It takes 3 parameters: 
+    - The header text
+    - The body text
+    - The type of notification ("error", "info", "warning");
 
 
 
