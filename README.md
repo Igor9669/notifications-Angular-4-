@@ -56,6 +56,8 @@ createNotification:
 
     }
 
+Here we are dynamically create html for our new notification. I used special class that Angular team created for that [Renderer2](https://angular.io/api/core/Renderer2).
+
 
 
 
