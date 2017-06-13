@@ -5,7 +5,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ## Setup
 Open the directory where you have placed the project and install all required modules:
 
-    `npm install`
+    npm install
 
 ## Development server
 
@@ -21,8 +21,12 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 
 ## Notification component
 To use notification component in your project you have to import it to your component and then place it somewhere in your html template:
+    
+    ...
 
-`<app-notification></app-notification>`
+    <app-notification></app-notification>
+    
+    ...
 
 ### Notification methods
 show(): `show(header_text: string, body_text: string, type_of_ntf: string)`
