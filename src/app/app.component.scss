@@ -1,0 +1,43 @@
+@mixin borderRadius($rad) {
+  -moz-border-radius: $rad;
+  -webkit-border-radius: $rad;
+  border-radius: $rad;
+}
+
+@mixin custom-input {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 12px 12px;
+  @include borderRadius(6px);
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  box-sizing: border-box;
+  outline: none;
+  &:focus {
+    border: 1px solid cornflowerblue;
+  }
+}
+
+.c {
+  text-align: center;
+  .container {
+    width: 350px;
+    display: inline-block;
+    input,
+    select {
+      @include custom-input;
+    }
+    button {
+      width: 100%;
+      padding: 12px;
+      cursor: pointer;
+      background-color: cadetblue;
+      color: #fff;
+      @include borderRadius(6px);
+      border: none;
+      outline: none;
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+}

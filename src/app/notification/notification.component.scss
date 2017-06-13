@@ -1,0 +1,232 @@
+@mixin borderRadius($rad) {
+  -moz-border-radius: $rad;
+  -webkit-border-radius: $rad;
+  border-radius: $rad;
+}
+
+$font-size_header: 16px;
+$font-size_body: 14px;
+$font-color_notification: #fff;
+$font-family_notification: "Helvetica Neue",
+Helvetica,
+Arial,
+sans-serif;
+$width_notification: 220px;
+$width_text: 170px;
+$min-height_notification: 34px;
+$opacity_hover: 0.8;
+$padding_notification: 12px;
+$margin_notification: 0 0 10px 0;
+$bg_error: orangered;
+$bg_warning: darkorange;
+$bg_info: dodgerblue;
+$bg_group: gray;
+.notifications {
+  position: absolute;
+  width: $width_notification;
+  bottom: 0;
+  right: 10px;
+  .notification {
+    margin: $margin_notification;
+    color: $font-color_notification;
+    padding: $padding_notification;
+    font-family: $font-family_notification;
+    opacity: 0;
+    position: relative;
+    min-height: $min-height_notification;
+    z-index: 99999;
+    @include borderRadius(3px);
+    &.error {
+      background-color: $bg_error;
+    }
+    &.warning {
+      background-color: $bg_warning;
+    }
+    &.info {
+      background-color: $bg_info;
+    }
+    &:hover {
+      opacity: $opacity_hover !important;
+      cursor: pointer;
+    }
+    .header {
+      font-size: $font-size_header;
+      font-weight: bold;
+      max-width: $width_text;
+      word-wrap: break-word;
+    }
+    .body {
+      font-size: $font-size_body;
+      max-width: $width_text;
+      word-wrap: break-word;
+    }
+    .icon {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+    }
+  }
+  .notification-group {
+    margin: $margin_notification;
+    color: $font-color_notification;
+    padding: $padding_notification;
+    font-family: $font-family_notification;
+    position: relative;
+    min-height: $min-height_notification;
+    background-color: $bg_group;
+    z-index: 99999;
+    @include borderRadius(3px);
+    .header {
+      font-size: $font-size_header;
+      font-weight: bold;
+      max-width: $width_text;
+      word-wrap: break-word;
+    }
+    .body {
+      font-size: $font-size_body;
+      max-width: $width_text;
+      word-wrap: break-word;
+    }
+    .icon {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+    }
+  }
+}
+
+.errorAnimIn {
+  -webkit-animation: scaleUp 0.4s ease-in;
+  animation: scaleUp 0.4s ease-in;
+}
+
+.errorAnimOut {
+  -webkit-animation: scaleDown 0.4s ease-out;
+  animation: scaleDown 0.4s ease-out;
+}
+
+.infoAnimIn {
+  -webkit-animation: fromRight 0.4s ease-in;
+  animation: fromRight 0.4s ease-in;
+}
+
+.infoAnimOut {
+  -webkit-animation: scaleDown 0.4s ease-out;
+  animation: scaleDown 0.4s ease-out;
+}
+
+.warningAnimIn {
+  -webkit-animation: fadeIn 0.4s ease-in;
+  animation: fadeIn 0.4s ease-in;
+}
+
+.warningAnimOut {
+  -webkit-animation: scaleDown 0.4s ease-out;
+  animation: scaleDown 0.4s ease-out;
+}
+
+@-webkit-keyframes scaleUp {
+  from {
+    -webkit-transform: scale(0);
+    opacity: 0
+  }
+  to {
+    -webkit-transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes scaleUp {
+  from {
+    transform: scale(0);
+    opacity: 0
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes scaleDown {
+  from {
+    -webkit-transform: scale(1);
+    opacity: 0.8
+  }
+  to {
+    -webkit-transform: scale(0);
+    opacity: 0;
+  }
+}
+
+@keyframes scaleDown {
+  from {
+    transform: scale(1);
+    opacity: 0.8
+  }
+  to {
+    transform: scale(0);
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes fromRight {
+  from {
+    -webkit-transform: translateX(-50%);
+    opacity: 0
+  }
+  to {
+    -webkit-transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes fromRight {
+  from {
+    transform: translateX(-50%);
+    opacity: 0
+  }
+  to {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fromBottom {
+  from {
+    -webkit-transform: translateY(50%);
+    opacity: 0
+  }
+  to {
+    -webkit-transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes fromBottom {
+  from {
+    transform: translateY(50%);
+    opacity: 0
+  }
+  to {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0
+  }
+  to {
+    opacity: 1;
+  }
+}
