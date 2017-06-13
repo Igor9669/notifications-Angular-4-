@@ -20,9 +20,13 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 
 ## Notification component
 To use notification component in your project you have to import it to your component and then place it somewhere in your html template:
-`...
+
+`
+...
+
 <app-notification></app-notification>
 ...
+
 `
 
 ### Notification methods
@@ -33,7 +37,7 @@ It takes 3 parameters:
     - The header text
 
     - The body text
-    
+
     - The type of notification ("error", "info", "warning");
 
 
